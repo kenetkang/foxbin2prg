@@ -3904,8 +3904,9 @@ Define Class c_foxbin2prg As Session
 					Endif
 
 					Do Case
-						Case lnVFPVersion = 900 And Int( Val( Substr( Version(4), Rat('.', Version(4)) + 1 ) ) ) < 3504
-							Error loLang.C_INCORRECT_VFP9_VERSION__MISSING_SP1_LOC
+                        *!*	 kenetkang disable 
+						*!*	 Case lnVFPVersion = 900 And Int( Val( Substr( Version(4), Rat('.', Version(4)) + 1 ) ) ) < 3504
+						*!*	 	Error loLang.C_INCORRECT_VFP9_VERSION__MISSING_SP1_LOC
 
 						Case lnVFPVersion < 900
 							Error loLang.C_INCORRECT_VFP9_VERSION__MISSING_SP1_LOC
@@ -31617,8 +31618,8 @@ Define Class CL_LANG As Custom
 							.C_CONVERTER_UNLOAD_LOC											= "Convertisseur déchargement"
 							.C_CONVERTING_FILE_LOC											= "Conversion de fichiers"
 							.C_DATA_ERROR_CANT_PARSE_UNPAIRING_DOUBLE_QUOTES_LOC			= "Erreur de données: ne peut pas analyser en raison de guillemets non appariés en ligne <<lcMetadatos>>"
-							.C_DUPLICATED_FILE_LOC											= "fichier dupliqué"
-							.C_DUPLICATED_OBJECT_LOC										= "Object dupliqué"
+							.C_DUPLICATED_FILE_LOC											= "fichier dupliqué "
+							.C_DUPLICATED_OBJECT_LOC										= "Object dupliqué "
 							.C_ENDDEFINE_MARKER_NOT_FOUND_LOC								= "Vous ne trouvez pas marqueur de fin [ENDDEFINE] de la ligne <<TRANSFORM(toClase._Inicio)>> ID [<<toClase._Nombre>>]"
 							.C_END_MARKER_NOT_FOUND_LOC										= "Vous ne trouvez pas fin marqueur [<<ta_ID_Bloques(lnPrimerID, 2)>>] qui ferme marqueur de début [<<ta_ID_Bloques(lnPrimerID, 1) >>] en ligne <<TRANSFORM(taBloquesExclusion (tnBloquesExclusion, 1))>>"
 							.C_END_OF_PROCESS_LOC											= "Fin du processus"
@@ -31626,12 +31627,12 @@ Define Class CL_LANG As Custom
 							.C_ERRORS_FOUND_IN_FILE_LOC										= "ERREURS TROUVÉ DANS LE FICHIER"
 							.C_EXTENSION_RECONFIGURATION_LOC								= "Extension Reconfiguration:"
 							.C_EXTERNAL_CLASS_COUNT_DOES_NOT_MATCH_FOUND_CLASSES_LOC		= "Nombre de classe externe (<<toModulo._ExternalClasses_Count>>) ne correspond pas classes trouvées (<<toModulo._Clases_Count>>) pour le fichier [<<toFoxBin2Prg.c_InputFile>>]"
-							.C_EXTERNAL_CLASS_NAME_WAS_NOT_FOUND_LOC						= "Aucune classe externe est trouvé"
-							.C_EXTERNAL_MEMBER_NAME_WAS_NOT_FOUND_LOC						= "Nom de membre externe n'a pas été trouvé"
+							.C_EXTERNAL_CLASS_NAME_WAS_NOT_FOUND_LOC						= "Aucune classe externe est trouvé "
+							.C_EXTERNAL_MEMBER_NAME_WAS_NOT_FOUND_LOC						= "Nom de membre externe n'a pas été trouvé "
 							.C_EXTERNAL_PARAMETERS_LOC										= "PARAMÈTRES EXTERNES"
 							.C_FIELD_NOT_FOUND_ON_FILE_STRUCTURE_LOC						= "Champ [<< laProps (m.I) >>] ne trouve pas dans la structure du fichier DBF <<('TABLABIN')>>"
 							.C_FILE_DOESNT_EXIST_LOC										= "Fichier ne existe pas:"
-							.C_FILE_NAME_IS_NOT_SUPPORTED_LOC								= "File [<<.c_InputFile>>] ne est pas supporté"
+							.C_FILE_NAME_IS_NOT_SUPPORTED_LOC								= "File [<<.c_InputFile>>] ne est pas supporté  "
 							.C_FILE_NOT_FOUND_LOC											= "Fichier introuvable"
 							.C_FILENAME_LOC													= "Fichier"
 							.C_FOXBIN2PRG_ERROR_CAPTION_LOC									= "ERREUR"
@@ -31877,7 +31878,7 @@ Define Class CL_LANG As Custom
 							ENDTEXT
 							.C_FOXBIN2PRG_JUST_VFP_9_LOC									= "FOXBIN2PRG est seulement pour Visual FoxPro 9.0!"
 							.C_FOXBIN2PRG_WARN_CAPTION_LOC									= "AVERTISSEMENT!"
-							.C_GENERATED_FILE_SIZE_LOC										= "Taille du fichier généré"
+							.C_GENERATED_FILE_SIZE_LOC										= "Taille du fichier généré  "
 							.C_GENERATING_BINARY_LOC										= "Génération Binaire"
 							.C_INCLUDING_CLASS_LOC											= "classe, y compris"
 							.C_INCLUDING_MEMBER_LOC											= "membres, y compris"
@@ -31887,11 +31888,11 @@ Define Class CL_LANG As Custom
 							.C_INVALID_PARAMETER_LOC										= "Paramètre non valide"
 							.C_IS_A_FILE_LOC												= "est un FICHIER"
 							.C_IS_A_DIRECTORY_LOC											= "est un RÉPERTOIRE"
-							.C_IS_UNSUPPORTED_LOC											= "ne est pas supporté"
+							.C_IS_UNSUPPORTED_LOC											= "ne est pas supporté "
 							.C_LANGUAGE_LOC													= "FR"
 							.C_MAIN_EXECUTION_LOC											= "EXÉCUTION PRINCIPALE"
 							.C_MENU_NOT_IN_VFP9_FORMAT_LOC									= "Menu [<<THIS.c_InputFile>>] ne est pas dans VFP 9 Format! - Se il vous plaît se convertir à VFP 9 avec MODIFY MENU '<<THIS.c_InputFile>>'"
-							.C_NAMES_CAPITALIZATION_PROGRAM_FOUND_LOC						= "* Programme des noms de capitalisation [<<lcEXE_CAPS>>] trouvé"
+							.C_NAMES_CAPITALIZATION_PROGRAM_FOUND_LOC						= "* Programme des noms de capitalisation [<<lcEXE_CAPS>>] trouvé "
 							.C_NAMES_CAPITALIZATION_PROGRAM_NOT_FOUND_LOC					= "* Programme des noms de capitalisation [<<lcEXE_CAPS>>] introuvables"
 							.C_OBJECT_NAME_WITHOUT_OBJECT_OREG_LOC							= "Object [<<toObj.CLASS>>] ne contient pas l'objet oReg (niveau <<TRANSFORM(tnNivel)>>)"
 							.C_ONLY_SETNAME_AND_GETNAME_RECOGNIZED_LOC						= "Opération non reconnu. Seulement SETNAME et GETNAME permis."
@@ -31963,7 +31964,7 @@ Define Class CL_LANG As Custom
 							.C_BINARY_TO_TEXT_LOC											= "Binario a Texto"
 							.C_TEXT_TO_BINARY_LOC											= "Texto a Binario"
 							.C_CONVERT_FOLDER_NONE_LOC										= "Ninguna"
-							.C_CONVERT_FOLDER_QUESTION_LOC									= "¿Qué tipo de conversión se debe hacer en esta carpeta?"
+							.C_CONVERT_FOLDER_QUESTION_LOC									= " ¿Qué tipo de conversión se debe hacer en esta carpeta?"
 							.C_CONVERTER_UNLOAD_LOC											= "Descarga del conversor"
 							.C_CONVERTING_FILE_LOC											= "Convirtiendo archivo"
 							.C_DATA_ERROR_CANT_PARSE_UNPAIRING_DOUBLE_QUOTES_LOC			= "Error de datos: No se puede parsear porque las comillas no son pares en la línea <<lcMetadatos>>"
